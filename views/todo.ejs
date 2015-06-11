@@ -1,0 +1,58 @@
+<%- include header %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="page-header"><a href="/">Todos</a></h1>
+      </div>
+      <div class="col-md-3 inputSearch">
+        <input type="text" class="form-control" id="inputSearch" placeholder="what to search" name="inputSearch" />
+      </div>   
+      <div class="col-md-1 search">
+        <button type="submit" class="btn btn-default" id="search">Search</button>
+      </div>   
+      <div class="col-md-1 logout">
+        <button type="submit" class="btn btn-default" id="logout"><a href='/logout'>Logout</a></button>
+      </div>   
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <form method="post" action="/todos">
+          <div class="form-group col-md-10">
+            <input type="text" class="form-control" id="todos" placeholder="Whar to be done" name="content" />
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-primary">Add</button>
+          </div>
+        </form>
+      </div> 
+    </div> 
+
+    <div class="content">
+      <% if (todos.length > 0 ) { %>
+        <% todos.forEach(function (todo){ %>
+          <div class="col-md-12" id="item_<%= todo.id%>">
+            <div class="row">
+              <div class="col-md-10">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                          <div id="todoContent">事件： <%= todo.content %></div>
+                          <div id="todoTime">时间： <%= todo.time %></div>
+                        </h4>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <button type="submit" class="btn btn-danger del" id="<%= todo.id%>">Del</button>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      <% } %>
+    </div>
+  </div>
+<%- include footer %>
+

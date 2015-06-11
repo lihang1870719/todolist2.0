@@ -1,0 +1,39 @@
+<%- include header%>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="page-header"><a href="/">Todos</a></h1>
+      </div>
+    </div>
+    <form class="form-horizontal" method="post" action="/reg">
+      <div class="form-group">
+        <label for="inputUserName" class="col-sm-2 control-label">UserName</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputUserName" placeholder="UserName" name="username" required="required" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword1" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="inputPassword1" placeholder="Password" name="password" required="required" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword2" class="col-sm-2 control-label">Confirm Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password" name="cfPassword" required="required" />
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button class="btn btn-default reg">Register</button>
+        </div>
+      </div>
+    </form>
+    <div class="row">
+      <% if ( error ) { %>
+      <div class="error" style="display: none"> <%= error%> </div>
+      <% } %>
+    </div>
+  </div>
+<%- include footer%>

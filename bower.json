@@ -1,0 +1,19 @@
+{
+  "name": "second",
+  "version": "0.0.1",
+  "authors": [
+    "lihang"
+  ],
+  "description": "manage lib",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}

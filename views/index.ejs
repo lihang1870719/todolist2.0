@@ -1,0 +1,25 @@
+<%- include header %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="page-header"><a href="/">Todos</a></h1>
+      </div>
+      <div class="col-md-12" id="banner">
+        <img src="/img/banner.jpg" width="100%">
+      </div>
+      <div class="col-md-12" id="login">
+        <div class="col-md-offset-10 col-md-1">
+          <button type="submit" class="btn btn-default" onclick="window.location='/login'">Login</button>
+        </div>
+        <div class="col-md-1">
+          <button type="submit" class="btn btn-default" onclick="window.location='/reg'">Register</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <% if ( error ) { %>
+      <div class="error" style="display: none"> <%= error%> </div>
+      <% } %>
+    </div>
+  </div>
+<%- include footer %>

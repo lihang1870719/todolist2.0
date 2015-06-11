@@ -1,0 +1,18 @@
+
+#todoContent, #todoTime {
+  margin: 0.8rem 0;
+}
+
+.del {
+  margin-top:1.6rem;
+}
+
+#login {
+  margin-top: 10px;
+}
+
+.inputSearch, .search, .logout {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
+}
